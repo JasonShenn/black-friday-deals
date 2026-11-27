@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealBeacon — Real Black Friday Deals, Checked Today</title>
+<meta name="description" content="DealBeacon lists real Black Friday and Cyber Monday deals found and price-checked on Nov 27, 2026, each with its store, sale price, usual price, discount and check time.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-row">
+      <h1 class="logo"><span class="beacon-dot" aria-hidden="true"></span>DealBeacon</h1>
+      <span class="tagline">Real Black Friday deals, checked today.</span>
+    </div>
+    <p class="lede">Every deal below was found and price-checked by hand on Black Friday,
+      November 27, 2026 — store, sale price, usual price, discount, and an honest
+      signal with the evidence. No inflated “was” prices, no guesses.</p>
+    <div class="stats-bar" role="list">
+      <span class="stat" role="listitem"><strong>32</strong> deals checked</span>
+      <span class="stat" role="listitem"><strong>5</strong> categories</span>
+      <span class="stat" role="listitem"><strong>6</strong> stores</span>
+      <span class="stat" role="listitem"><strong>13</strong> new all-time lows</span>
+      <span class="stat" role="listitem">Checked <strong>Nov 27, 2026 · 4:30 PM CST</strong></span>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="search-row">
+    <input id="search-box" type="search" placeholder="Search deals — try “AirPods”, “Dyson” or “LEGO”…" aria-label="Search deals">
+  </div>
+  <div class="chip-row" id="category-chips" aria-label="Filter by category"></div>
+  <div class="filter-row">
+    <label for="store-select">Store</label>
+    <select id="store-select" aria-label="Filter by store">
+      <option value="All">All stores</option>
+    </select>
+    <label for="discount-select">Discount</label>
+    <select id="discount-select" aria-label="Filter by discount">
+      <option value="0">Any discount</option>
+      <option value="20">20% off or more</option>
+      <option value="40">40% off or more</option>
+      <option value="50">50% off or more</option>
+    </select>
+    <label for="sort-select">Sort by</label>
+    <select id="sort-select" aria-label="Sort deals">
+      <option value="value">Best value first</option>
+      <option value="discount">Biggest discount</option>
+      <option value="savings">Biggest saving ($)</option>
+      <option value="priceAsc">Lowest price</option>
+      <option value="priceDesc">Highest price</option>
+    </select>
+  </div>
+  <p id="result-count" aria-live="polite">Showing all 32 deals</p>
+</div>
+
+<main>
+  <section id="deal-detail" hidden>
+    <button id="back-to-list" type="button">← Back to all deals</button>
+    <div id="detail-body"></div>
+  </section>
+
+  <div id="deal-grid" aria-live="polite"></div>
+  <p id="empty-note" hidden>No deals match those filters. Try clearing the search or lowering the discount.</p>
+</main>
+
+<footer class="site-footer">
+  <h2>How these prices were checked</h2>
+  <p>Each deal was found and verified on November 27, 2026 by reading the price at
+    its store or in a deals source that names the store (CNN Underscored, DealNews,
+    9to5Toys, TradingView / Benzinga, Mashable, USA Today, DigitalCitizen and others).
+    The check time and the source are printed on every card. The discount is computed
+    from the sale price and the usual price shown.</p>
+  <p>The “really a deal?” signal is honest: <strong>NEW LOW</strong> means the lowest
+    price tracked for that product; <strong>GOOD PRICE</strong> means a genuine cut worth
+    buying; <strong>ROUTINE DEAL</strong> means a real discount that is small or
+    not new — buy it only if you need it now.</p>
+  <p>Prices move fast on Black Friday. The store’s page is the final word — open the
+    link and check the price before you buy. DealBeacon is an independent deal finder;
+    it is not affiliated with Amazon, Best Buy, Walmart, Target, Dyson or Nike.</p>
+</footer>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
